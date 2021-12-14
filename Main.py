@@ -16,7 +16,6 @@ else:
 
 # global variables
 emp_data = 'EmployeeData.txt'
-per_data = 'PersonData.txt'  # may be able to remove
 lst_objs = []
 
 # Main Body of Script  ---------------------------------------------------- #
