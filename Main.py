@@ -39,13 +39,14 @@ while True:
                 new_employee = io.input_employee_data()
                 for item in lst_objs:
                     if new_employee.employee_id == item.employee_id:
+                        print("WARNING:  Employee ID in use. Please choose another ID.")
+                        ids = []
+                        for item in lst_objs:
+                            ids.append(item.employee_id)
+                        print(f"The employee ID in user are: {ids}")
                         raise Exception
             except:
-                print("WARNING:  Employee ID in use. Please choose another ID.")
-                ids = []
-                for item in lst_objs:
-                    ids.append(item.employee_id)
-                print(f"The employee ID in user are: {ids}")
+                pass
             else:
                 lst_objs.append(new_employee)
                 break
